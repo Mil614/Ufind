@@ -1,0 +1,204 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f8e8;
+    
+}
+
+/* Container for the login and sign up form */
+.container {
+    display: flex;
+    width: 1000%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #FBFFE9;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Left side of form */
+.left-side {
+    flex: 2;
+    background: url('wavybg.png') no-repeat center center;
+    background-size: cover;
+}
+
+
+.left-side img {
+    width: 170%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right side (login and signup form) */
+.right-side {
+    flex: 1;
+    text-align: center;
+    padding-top: 150px;
+    padding-left: 100px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+}
+
+.right-side h2 {
+    color: #526D50;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+/* Style the dropdown to match input fields */
+form select {
+    width: 100%;
+    height: 60px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #9cb894; /* Same as input fields */
+    border-radius: 20px; /* Rounded corners */
+    outline: none;
+    font-size: 20px; /* Match input font size */
+    background: transparent;
+    color: #526D50; /* Text color */
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    transition: 0.3s ease-in-out;
+    appearance: none; /* Remove default dropdown styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 50px; /* Space for custom arrow */
+    text-align: left;
+    
+    /* Custom dropdown arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%239cb894"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+/* Style on hover/focus */
+form select:focus {
+    border-color: #6d8c68;
+}
+
+/* Ensure option text is readable */
+form select option {
+    background: #FBFFE9; /* Match form background */
+    color: #526D50;
+}
+
+/* Input fields log in and sign up */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #9cb894;
+    border-radius: 20px;
+    outline: none;
+    font-size: 20px;
+    background: transparent;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    transition: 0.3s ease-in-out;
+}
+
+form input:focus {
+    border-color: #6d8c68;
+}
+
+/* Forgot password text css */
+.forgot-password {
+    text-align: right;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.forgot-password a {
+    text-decoration: none;
+    color: #526D50;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #A0C49D;
+    border: none;
+    border-radius: 20px;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Sign-up and Log in css */
+p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+p a {
+    text-decoration: none;
+    color: #526D50;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .left-side {
+        display: none;
+    }
+
+    .right-side {
+        padding: 30px;
+    }
+
+    form input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+}

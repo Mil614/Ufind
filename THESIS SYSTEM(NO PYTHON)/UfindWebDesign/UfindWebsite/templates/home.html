@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFind</title>
+    <link rel="stylesheet" href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css" >
+    <link rel="stylesheet" href="/UfindWebDesign/UfindWebsite/static/search.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="brand-container">
+        <button id="menu-btn" class="menu-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="49" height="56"><!-- Font Awesome Pro 6.0.0-alpha2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M416 288H32C14.4 288 0 302.4 0 320V320C0 337.6 14.4 352 32 352H416C433.6 352 448 337.6 448 320V320C448 302.4 433.6 288 416 288ZM416 160H32C14.4 160 0 174.4 0 192V192C0 209.6 14.4 224 32 224H416C433.6 224 448 209.6 448 192V192C448 174.4 433.6 160 416 160Z"/></svg>
+     </button>
+        <h1 class="brand">UFind</h1>
+    </div>
+    <div class="icons">
+        <button id="notif-btn" class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="48px" height="48px" color="#526D50"><!-- Font Awesome Pro 6.0.0-alpha2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M433.38 334.75C405.38 308.25 384.004 280.375 384.004 185.875C384.004 106.25 320.627 41.375 240 33.5V16C240 7.125 232.875 0 224 0S208 7.125 208 16V33.5C127.373 41.375 63.996 106.25 63.996 185.875C63.996 280.375 42.619 308.25 14.619 334.75C0.619 348.125 -3.756 368.25 3.369 386C10.619 404.25 28.119 416 47.994 416H400.005C419.88 416 437.38 404.25 444.63 386C451.755 368.25 447.38 348.125 433.38 334.75ZM400.005 384H47.994C33.744 384 26.619 367.5 36.619 358C71.496 324.75 95.996 287.625 95.996 185.875C95.996 118.5 153.248 64 224 64S352.004 118.5 352.004 185.875C352.004 287.25 376.254 324.625 411.38 358C421.38 367.625 414.13 384 400.005 384ZM272.295 448C264.857 448 257.783 452.146 255.244 458.879C250.603 471.176 238.334 480 223.994 480S197.384 471.176 192.744 458.879C190.205 452.146 183.129 448 175.693 448H175.691C165.078 448 157.48 457.998 160.765 467.717C169.431 493.371 194.525 512 223.994 512C253.461 512 278.554 493.371 287.222 467.717C290.505 457.998 282.91 448 272.295 448Z"/></svg>
+        </button>
+        <button id="profile-btn" class="icon">
+            <img src="/UfindWebDesign/UfindWebsite/static/images/pfpig.jpg" alt="Profile" class="profile-img">
+        </button>
+    </div>
+</header>
+
+
+   <!-- Sidebar -->
+<nav id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <button id="close-menu" class="close-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="49" height="56" ><!-- Font Awesome Pro 6.0.0-alpha2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M416 288H32C14.4 288 0 302.4 0 320V320C0 337.6 14.4 352 32 352H416C433.6 352 448 337.6 448 320V320C448 302.4 433.6 288 416 288ZM416 160H32C14.4 160 0 174.4 0 192V192C0 209.6 14.4 224 32 224H416C433.6 224 448 209.6 448 192V192C448 174.4 433.6 160 416 160Z"/></svg>
+        </button>
+        <span class="sidebar-title">UFind</span>
+    </div>
+    <ul>
+        <li><a href="/UfindWebDesign/UfindWebsite/templates/home.html">Home</a></li>
+        <li><a href="#">Search History</a></li>
+        <li><a href="#">Report Found Item</a></li>
+        <li><a href="#">Notification</a></li>
+        <li><a href="#">Tutorial</a></li>
+        <li><a href="#">About Us</a></li>
+    </ul>
+</nav>
+
+
+ <!-- Search Bar -->
+ <main class="search-container">
+    <h2>Looking for something?</h2>
+    <div class="search-bar">
+        <button class="attach-btn"><i class="fa-light fa-paperclip-vertical"></i></button>
+        <input type="text" placeholder="  " class="search-input">
+        <div class="loading-screen" id="loading-screen">
+              <h2>Finding a match...</h2>
+            <img src="/UfindWebDesign/UfindWebsite/static/images/loadingscreen.gif" alt="Loading...">
+        </div>
+        <button class="send-btn"><i class="fa-light fa-paper-plane-top"></i></button>
+    </div>
+</main>
+
+
+    <!-- Notifications Popup -->
+    <div id="notif-popup" class="popup hidden">
+        <h3>Notifications</h3>
+        <div>
+        <p><strong>Black Wallet</strong> - Someone found your Black Wallet. Claim it now.</p>
+        <p><strong>Orange Umbrella</strong> -  Someone found your Item. Claim it now.</p>
+        <p><strong>Blue phone case</strong> -  Someone found your Item. Claim it now.</p>
+        <p><strong>Yellow Jacket</strong> -  Someone found your Item. Claim it now.</p>
+       
+    </div>
+ </div>
+
+    <!-- Profile Popup -->
+    <div id="profile-popup" class="popup hidden">
+        <ul>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24px" height="24px"><!-- Font Awesome Pro 6.0.0-alpha2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M224 256C294.695 256 352 198.691 352 128S294.695 0 224 0C153.312 0 96 57.309 96 128S153.312 256 224 256ZM224 32C276.936 32 320 75.064 320 128C320 180.934 276.936 224 224 224S128 180.934 128 128C128 75.064 171.064 32 224 32ZM274.664 304H173.336C77.609 304 0 381.602 0 477.332C0 496.477 15.523 512 34.664 512H413.336C432.477 512 448 496.477 448 477.332C448 381.602 370.398 304 274.664 304ZM413.336 480H34.664C33.195 480 32 478.803 32 477.332C32 399.4 95.402 336 173.336 336H274.664C352.598 336 416 399.4 416 477.332C416 478.803 414.805 480 413.336 480Z"/></svg> Profile </a></li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24px" height="24px"><!-- Font Awesome Pro 6.0.0-alpha2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M256.275 512C200.224 512 180.27 500.674 180.27 476.06V436.495C165.097 430.12 150.925 421.963 137.908 412.088L103.609 431.87C98.989 434.573 93.633 435.884 88.251 435.884C51.537 435.884 12 343.012 12 327.243C12 316.393 17.806 305.902 27.714 300.175L61.888 280.455C60.794 272.11 60.263 264.016 60.263 255.984S60.794 239.858 61.888 231.514L27.698 211.763C17.803 206.06 12 195.575 12 184.712C12 172.127 49.984 76.05 88.203 76.05C93.62 76.05 99.027 77.388 103.719 80.161L137.908 99.881C150.925 90.005 165.097 81.849 180.27 75.473V35.908C180.27 4.335 215.918 0 256.267 0C295.981 0 332.28 4.083 332.28 35.908V75.473C347.452 81.849 361.625 90.005 374.642 99.881L408.94 80.099C413.561 77.395 418.921 76.085 424.307 76.085C460.778 76.085 500.55 168.638 500.55 184.725C500.55 195.575 494.743 206.067 484.836 211.794L450.662 231.514C451.756 239.858 452.287 247.953 452.287 255.984S451.756 272.11 450.662 280.455L484.851 300.206C494.746 305.908 500.55 316.394 500.55 327.256C500.55 339.845 462.568 435.918 424.337 435.918C418.917 435.918 413.511 434.581 408.831 431.808L374.642 412.088C361.625 421.963 347.452 430.12 332.28 436.495V476.06C332.28 500.618 312.433 512 256.275 512ZM141.221 373.21C177.137 404.033 193.558 407.572 212.272 414.213V476.06C226.382 478.404 241.09 479.787 256.037 479.787C270.983 479.787 286.167 478.404 301.231 475.216L300.278 414.213C316.348 408.51 335.459 403.993 371.329 373.21L424.941 404.181C443.724 382.117 458.709 356.209 468.335 327.614L415.394 297.049C418.139 282.055 420.253 271.615 420.253 257.978C420.253 247.026 418.89 234.011 415.394 214.919L468.85 184.074C459.022 156.322 443.927 130.102 423.754 107.35L371.329 138.758C335.413 107.936 318.992 104.397 300.278 97.756V35.908C286.167 33.565 271.459 32.182 256.513 32.182C241.567 32.182 226.382 33.565 211.319 36.752L212.272 97.756C196.202 103.458 177.091 107.975 141.221 138.758L87.608 107.788C68.623 130.102 53.528 156.322 43.918 185.261L97.156 214.919C94.41 229.914 92.296 240.354 92.296 253.991C92.296 264.943 93.66 277.958 97.156 297.049L43.699 327.895C53.528 355.647 68.623 381.867 88.796 404.618L141.221 373.21ZM256.275 351.99C203.334 351.99 160.269 308.925 160.269 255.984S203.334 159.979 256.275 159.979S352.281 203.044 352.281 255.984S309.216 351.99 256.275 351.99ZM256.275 191.98C220.976 191.98 192.271 220.701 192.271 255.984S220.976 319.988 256.275 319.988S320.279 291.268 320.279 255.984S291.574 191.98 256.275 191.98Z "></path></svg>Settings</a></li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24px" height="24px"><!-- Font Awesome Pro 6.0.0-alpha2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M191.974 224C191.974 206.375 177.598 192 159.971 192H127.969C92.591 192 63.963 220.625 63.963 256V319.625C63.963 355 92.591 383.625 127.969 383.625H159.971C177.598 383.625 191.974 369.25 191.974 351.625V224ZM159.971 351.625H127.969C110.342 351.625 95.966 337.25 95.966 319.625V256C95.966 238.375 110.342 224 127.969 224H159.971V351.625ZM383.99 383.625C419.367 383.625 447.995 355 447.995 319.625V256C447.995 220.625 419.367 192 383.99 192H351.987C334.36 192 319.984 206.375 319.984 224V351.625C319.984 369.25 334.36 383.625 351.987 383.625H383.99ZM351.987 224H383.99C401.616 224 415.992 238.375 415.992 256V319.625C415.992 337.25 401.616 351.625 383.99 351.625H351.987V224ZM280.171 1.131C126.661 -13.164 4.044 110.125 0.083 256L0 271.917C-0.046 280.763 7.155 288 16.001 288H16.001C24.756 288 31.956 280.838 32.002 272.084L32.086 256C35.516 128.568 142.532 20.626 276.877 32.964C393.13 43.64 479.997 145.283 479.997 262.015V432C479.997 458.51 458.505 480 431.993 480H348.987C353.068 469.118 353.596 456.46 346.705 443.313C337.612 425.968 318.67 416 299.084 416L241.781 416C218.566 416 197.276 431.686 192.891 454.481C186.991 485.152 210.362 512 239.978 512H431.993C476.18 512 512 476.183 512 432V262.914C512 129.615 412.907 13.491 280.171 1.131ZM303.983 480H239.978C231.102 480 223.976 472.875 223.976 464S231.102 448 239.978 448H303.983C312.859 448 319.984 455.125 319.984 464S312.859 480 303.983 480Z"/></svg> Help & Support</a></li>
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"width="24px" height="24px"><!-- Font Awesome Pro 6.0.0-alpha2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M285.625 128H226.375C189.781 128 160 157.766 160 194.359V204C160 212.844 167.156 220 176 220S192 212.844 192 204V194.359C192 175.406 207.406 160 226.375 160H285.625C304.594 160 320 175.406 320 194.359C320 206.844 313.219 218.359 302.938 224.078L242.5 254.297C231.094 260.656 224 272.703 224 285.766V304C224 312.844 231.156 320 240 320S256 312.844 256 304V285.766C256 284.312 256.781 282.969 257.438 282.594L317.844 252.375C338.906 240.703 352 218.469 352 194.359C352 157.766 322.219 128 285.625 128ZM240 344C226.746 344 216 354.746 216 368S226.746 392 240 392S264 381.254 264 368S253.254 344 240 344ZM256 16C123.451 16 16 123.451 16 256S123.451 496 256 496S496 388.549 496 256S388.549 16 256 16ZM256 464C141.309 464 48 370.691 48 256S141.309 48 256 48S464 141.309 464 256S370.691 464 256 464Z"/></svg> FAQs</a></li>
+            <li><a href="/UfindWebDesign/UfindWebsite/templates/login.html" class="logout"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24px" height="24px"><!-- Font Awesome Pro 6.0.0-alpha2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M176 448H80C53.531 448 32 426.469 32 400V112C32 85.531 53.531 64 80 64H176C184.844 64 192 56.844 192 48S184.844 32 176 32H80C35.875 32 0 67.875 0 112V400C0 444.125 35.875 480 80 480H176C184.844 480 192 472.844 192 464S184.844 448 176 448ZM502.625 233.375L374.625 105.375C365.469 96.219 351.719 93.469 339.75 98.438C327.797 103.375 320 115.062 320 128V192H176C149.492 192 128 213.492 128 240V272C128 298.508 149.492 320 176 320H320V384C320 396.938 327.797 408.625 339.75 413.562C351.719 418.531 365.469 415.781 374.625 406.625L502.625 278.625C508.875 272.375 512 264.188 512 256S508.875 239.625 502.625 233.375ZM352 384V288H176C167.176 288 160 280.82 160 272V240C160 231.18 167.176 224 176 224H352V192L351.996 128L479.996 256L352 384Z"/></svg> Log out</a></li>
+        </ul>
+    </div>
+
+    <script src="/UfindWebDesign/UfindWebsite/static/javascripts/searchscript.js"></script>
+</body>
+</html>

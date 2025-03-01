@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-Find</title>
+    <link rel="stylesheet" href="/UfindWebDesign/UfindWebsite/static/styles.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');</style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <img src= "{{ url_for('static', filename='images/wavybg.png') }}" alt="Decorative Design">
+        </div>
+        <div class="right-side">
+            <h2 class="fade-in">SIGN UP</h2>
+            <form action="/UfindWebDesign/UfindWebsite/templates/home.html" method="POST">
+                <input type="text" name="email" placeholder="Email or Phone Number" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                <button type="button" class="fade-in" onclick="location.href='/UfindWebDesign/UfindWebsite/templates/home.html'">SIGN UP</button>
+                <p>Have an account? <a href="/UfindWebDesign/UfindWebsite/templates/login.html">Log in</a></p>
+            </form>   
+        </div>
+    </div>
+</body>
+</html>

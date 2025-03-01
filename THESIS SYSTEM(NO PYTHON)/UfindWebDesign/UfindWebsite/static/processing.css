@@ -1,0 +1,388 @@
+/* General Styles */
+body {
+    font-family:'Poppins', sans-serif;;
+    background-color: #FBFFE9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #526D50;
+    color: white;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar Header (Close Button + UFind Title) */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    padding: 10px 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white; 
+    display: flex;
+    align-items: center;
+}
+.close-btn svg path{
+    width: 24px; /* Adjust size as needed */
+    height: 24px;
+    fill: white; /* Apply the white color */
+}
+
+.sidebar-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #FBFFE9;
+}
+
+/* Sidebar Menu */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    padding: 12px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f5ffe5;
+}
+
+/* Aligns Menu Icon and UFind */
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Menu Button (Same Icon as Sidebar Close) */
+.menu-icon {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #526D50;
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: #526D50;
+    
+}
+
+/* Icons Section (Notification + Profile) */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Remove Background Around Notification & Profile */
+.icon {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #cde800;
+    display: flex;
+    align-items: center;
+    width: 49px;
+    height: 48px;
+}
+#notif-btn {
+    font-size: 24px; /* Adjust font size if needed */
+    width: 49px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #526D50; /* Adjust color if needed */
+}
+#notif-btn svg{
+        width: 36px;  /* Adjust size as needed */
+        height: 36px;
+        fill: #526D50; /* Apply the greenish color */  
+}
+#notif-popup p, h3{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #526D50; 
+    margin-bottom:10px;
+}
+
+#notif-popup p:last-child {
+   border-bottom:none;  
+}
+
+/* Profile Image */
+.profile-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#menu-btn {
+    color:#526D50; /* Change the button color */
+}
+
+#menu-btn svg path {
+    fill: currentColor;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: #526D50;
+    color: white;
+    padding: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; 
+    padding: 10px 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white; 
+    display: flex;
+    align-items: center;
+}
+
+
+.sidebar-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    padding: 12px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+}
+
+
+
+/* Search Bar */
+.search-container {
+    text-align: center;
+    margin-top: 50px;
+    color: #526D50;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #E1ECC8;
+    padding: 12px;
+    border-radius: 30px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Input field takes all available space */
+.search-input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+    color: #526D50;
+}
+
+/* Buttons (icons) styling */
+.attach-btn, .send-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #526D50;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+}
+
+/* Paperclip aligned to the left */
+.attach-btn {
+    margin-left: 10px;
+}
+
+/* Airplane icon aligned to the right */
+.send-btn {
+    margin-right: 10px;
+}
+
+/* Notification Popup */
+/* Profile Popup */
+.popup{
+    position: absolute;
+    top: 60px; 
+    right: 20px;
+    background-color: #E1ECC8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    width: 321px;
+    height: 347px;
+}
+
+ 
+
+/* List Styling */
+.popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.popup h3, p{
+    color: #526D50;
+}
+/* List Items */
+.popup li {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 12px 0;
+}
+
+/* Icons */
+.popup img {
+    width: 24px; /* Adjust icon size */
+    height: 24px;
+}
+
+/* Text */
+.popup a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #526D50;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logout Style */
+.popup .logout {
+    color: #C0392B; /* Red color for logout */
+    font-weight: bold;
+}
+
+/* Show the popup */
+.popup:not(.hidden) {
+    display: block;
+}
+/* ✅ Notification Popup Box */
+#notif-popup {
+    background-color: #E1ECC8; /* White background */
+    color: #526D50;
+    
+}
+
+/* ✅ Profile Popup Box */
+#profile-popup {
+    background-color: #E1ECC8; /* Light green */
+    width: 300px;
+    height: 250px;
+}
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /* Keep it centered */
+    top: 0;
+    left: 0;
+    background-color: #FBFFE9;
+   
+}
+
+.loading-text {
+    color: #526D50;
+    font-size: 49px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px; /* Spacing from GIF */
+}
+
+.loading-gif {
+    width: 137px;
+    height: 137px;
+}
